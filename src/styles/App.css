@@ -1,0 +1,16 @@
+.main {
+  width: 75%;
+  min-height: 100vh;
+  position: absolute;
+  top: 0;
+  right: 0;
+  border: 1px solid black;
+}
+.side {
+  width: 25%;
+  min-height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: 1px solid black;
+}
