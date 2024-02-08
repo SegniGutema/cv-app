@@ -1,0 +1,23 @@
+.personalInfo {
+  background-color: rgba(6, 6, 6, 0.934);
+  color: white;
+  padding: 0.2rem 1.5rem;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+input {
+  background-color: transparent;
+  border: none;
+  margin: 2px;
+  color: white;
+  padding: 5px;
+  width: min-content;
+}
+input:focus {
+  border-color: inherit;
+}
+#Name {
+  height: 2rem;
+  font-size: 1rem;
+  font-weight: bolder;
+}

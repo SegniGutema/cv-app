@@ -1,16 +1,13 @@
 .main {
   width: 75%;
   min-height: 100vh;
-  position: absolute;
-  top: 0;
-  right: 0;
-  border: 1px solid black;
+  float: right;
+  border-left: 2px solid black;
 }
 .side {
+  padding: 3rem 1rem;
   width: 25%;
-  min-height: 100vh;
-  position: absolute;
-  top: 0;
-  left: 0;
-  border: 1px solid black;
+  height: 100%;
+  float: left;
+  /* border-bottom: 15vh solid rgba(6, 6, 6, 0.934); */
 }

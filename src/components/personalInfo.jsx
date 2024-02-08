@@ -1,43 +1,33 @@
 import { useState } from "react";
+import "../styles/personalInfo.css";
 
-function Input({ value, label }) {
-  const [input, setInput] = useState(value);
+function Input({ placeholder }) {
+  const [value, setValue] = useState("");
   function changeInput(e) {
-    setInput(e.target.value);
+    setValue(e.target.value);
   }
   return (
     <>
-      <label>{label}</label>
-      <br />
-      <input value={input} onChange={changeInput} />
-      <br />
+      <input
+        key={placeholder}
+        id={placeholder}
+        value={value}
+        onChange={changeInput}
+        placeholder={placeholder}
+      />
     </>
   );
 }
-export function EditPersonalInfo({ personalInfo }) {
-  return (
-    <section className="general">
-      <h1>Personal Info</h1>
-      <Input label={"Name"} value={personalInfo.name} />
-      <Input label={"Position"} value={personalInfo.position} />
-      <Input label={"Company"} value={personalInfo.company} />
-      <Input label={"Email"} value={personalInfo.email} />
-      <Input label={"Tel"} value={personalInfo.tel} />
-      <Input label={"Address"} value={personalInfo.address} />
-    </section>
-  );
-}
-
 export function PersonalInfo({ personalInfo }) {
   return (
-    <section>
-      <h1>{personalInfo.name}</h1>
-      <h2>
-        {personalInfo.position} at {personalInfo.company}
-      </h2>
-      <span>{personalInfo.email}</span>
-      <span>{personalInfo.tel}</span>
-      <span>{personalInfo.address}</span>
+    <section className="personalInfo">
+      <Input placeholder={"Name"} />
+      <Input placeholder={"Position"} />
+      <br />
+      <Input placeholder={"Company"} />
+      <Input placeholder={"Email"} />
+      <Input placeholder={"Tel"} />
+      <Input placeholder={"Address"} />
     </section>
   );
 }

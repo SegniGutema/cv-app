@@ -1,16 +1,18 @@
 import "./styles/App.css";
 import data from "./components/data";
-import { EditPersonalInfo, PersonalInfo } from "./components/generalInfo";
+import { PersonalInfo } from "./components/personalInfo";
+import { Education } from "./components/education";
+import { Experience } from "./components/experience";
 
 function App() {
   return (
     <>
       <div className="main">
         <PersonalInfo personalInfo={data.personalInfo} />
+        <Education education={data.education.list} />
+        <Experience experience={data.experience.list} />
       </div>
-      <div className="side">
-        <EditPersonalInfo personalInfo={data.personalInfo} />
-      </div>
+      <div className="side"></div>
     </>
   );
 }

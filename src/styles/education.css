@@ -1,0 +1,29 @@
+.education {
+  margin: 1rem 0.5rem;
+}
+p {
+  background-color: rgba(6, 6, 6, 0.934);
+  color: white;
+  width: fit-content;
+  padding: 1px 5px;
+  border-radius: 5px;
+  border: none;
+  font-weight: bolder;
+  margin-bottom: 0.5rem;
+}
+.eduContainer {
+  display: flex;
+  flex-direction: column;
+}
+.eduCard {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  color: black;
+  /* border: 1px solid black; */
+  padding: 0.4rem 1rem;
+}
+.eduCard input {
+  color: black;
+  border-radius: 7px;
+}
