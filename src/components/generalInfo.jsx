@@ -1,46 +1,43 @@
 import { useState } from "react";
 
-export function Form() {
-  const [name, setName] = useState("Your Name");
-  const [title, setTitle] = useState("Title");
-
-  function changeName(e) {
-    setName(e.target.value);
+function Input({ value, label }) {
+  const [input, setInput] = useState(value);
+  function changeInput(e) {
+    setInput(e.target.value);
   }
-  function changeTitle(e) {
-    setTitle(e.target.value);
-  }
-
-  function handleSubmit(e) {
-    e.preventDefault();
-    return (
-      <div>
-        <h2>{name}</h2>
-        <p>{title}</p>
-      </div>
-    );
-  }
-
   return (
-    <form onSubmit={handleSubmit}>
-      <label>
-        {name}:<br />
-        <input type="text" name="name" value={name} onChange={changeName} />
-      </label>
+    <>
+      <label>{label}</label>
       <br />
-      <label>
-        {title}:<br />
-        <input type="text" name="title" value={title} onChange={changeTitle} />
-      </label>
+      <input value={input} onChange={changeInput} />
       <br />
-      <input type="submit" value="Submit" />
-    </form>
+    </>
   );
 }
-export function generalInfo() {
+export function EditPersonalInfo({ personalInfo }) {
   return (
-    <div className="general">
-      <Form />
-    </div>
+    <section className="general">
+      <h1>Personal Info</h1>
+      <Input label={"Name"} value={personalInfo.name} />
+      <Input label={"Position"} value={personalInfo.position} />
+      <Input label={"Company"} value={personalInfo.company} />
+      <Input label={"Email"} value={personalInfo.email} />
+      <Input label={"Tel"} value={personalInfo.tel} />
+      <Input label={"Address"} value={personalInfo.address} />
+    </section>
+  );
+}
+
+export function PersonalInfo({ personalInfo }) {
+  return (
+    <section>
+      <h1>{personalInfo.name}</h1>
+      <h2>
+        {personalInfo.position} at {personalInfo.company}
+      </h2>
+      <span>{personalInfo.email}</span>
+      <span>{personalInfo.tel}</span>
+      <span>{personalInfo.address}</span>
+    </section>
   );
 }

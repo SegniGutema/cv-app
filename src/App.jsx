@@ -1,13 +1,16 @@
 import "./styles/App.css";
-import { generalInfo, Form } from "./components/generalInfo";
+import data from "./components/data";
+import { EditPersonalInfo, PersonalInfo } from "./components/generalInfo";
 
 function App() {
   return (
     <>
       <div className="main">
-        <Form />
+        <PersonalInfo personalInfo={data.personalInfo} />
       </div>
-      <div className="side">hi</div>
+      <div className="side">
+        <EditPersonalInfo personalInfo={data.personalInfo} />
+      </div>
     </>
   );
 }
