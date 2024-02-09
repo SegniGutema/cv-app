@@ -22,12 +22,13 @@ export function PersonalInfo({ personalInfo }) {
   return (
     <section className="personalInfo">
       <Input placeholder={"Name"} />
-      <Input placeholder={"Position"} />
       <br />
+      <Input placeholder={"Position"} />
+      at
       <Input placeholder={"Company"} />
-      <Input placeholder={"Email"} />
+      {/* <Input placeholder={"Email"} />
       <Input placeholder={"Tel"} />
-      <Input placeholder={"Address"} />
+      <Input placeholder={"Address"} /> */}
     </section>
   );
 }

@@ -1,3 +1,4 @@
+import { v4 as uuidv4 } from "uuid";
 const data = {
   personalInfo: {
     id: "personalInfo",
@@ -12,7 +13,7 @@ const data = {
     id: "education",
     list: [
       {
-        id: "edu1",
+        id: uuidv4(),
         school: "school/university",
         fieldOfStudy: "field of study",
         startDate: "Present",
@@ -24,7 +25,7 @@ const data = {
     id: "experience",
     list: [
       {
-        id: "",
+        id: uuidv4(),
         company: "company",
         position: "position",
         startDate: "Present",

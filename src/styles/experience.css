@@ -18,7 +18,7 @@ p {
 .expCard {
   display: flex;
   flex-direction: column;
-  gap: 7px;
+  gap: 3px;
   color: black;
   /* border: 1px solid black; */
   padding: 0.4rem 1rem;
@@ -26,11 +26,44 @@ p {
 .expCard input {
   color: black;
   border-radius: 7px;
+  width: fit-content;
+  height: auto;
 }
+
+.expCard input:focus {
+  border-color: none;
+}
+
 .divider {
   margin-bottom: 0.5rem;
   height: 2px;
   border: none;
   width: 90%;
   background-color: black;
+}
+#addButton {
+  width: fit-content;
+  padding: 2px 6px;
+  background-color: rgba(6, 6, 6, 0.934);
+  color: white;
+  border-radius: 5px;
+  margin: 5px;
+}
+#deleteButton {
+  width: fit-content;
+  padding: 2px 6px;
+  background-color: rgba(6, 6, 6, 0.934);
+  color: white;
+  display: inline-block;
+  border-radius: 5px;
+  margin: 5px;
+}
+#saveButton {
+  width: fit-content;
+  padding: 2px 6px;
+  background-color: rgba(6, 6, 6, 0.934);
+  color: white;
+  border-radius: 5px;
+  display: inline-block;
+  margin: 5px;
 }

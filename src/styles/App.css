@@ -2,7 +2,7 @@
   width: 75%;
   min-height: 100vh;
   float: right;
-  border-left: 2px solid black;
+  /* border-left: 2px solid black; */
 }
 .side {
   padding: 3rem 1rem;
