@@ -1,0 +1,22 @@
+#contact {
+  width: 90%;
+  margin-top: 200px;
+}
+#contact input {
+  max-width: 150px;
+  color: black;
+}
+#addContactButton {
+  padding: 3px 6px;
+  width: fit-content;
+  background-color: rgba(6, 6, 6, 0.934);
+  color: white;
+  border-radius: 5px;
+  margin-top: 5px;
+}
+#delContactBtn {
+  display: none;
+}
+#contact input:focus ~ #delContactBtn {
+  display: block;
+}

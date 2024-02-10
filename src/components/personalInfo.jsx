@@ -1,34 +1,34 @@
 import { useState } from "react";
 import "../styles/personalInfo.css";
 
-function Input({ placeholder }) {
-  const [value, setValue] = useState("");
-  function changeInput(e) {
-    setValue(e.target.value);
+export function PersonalInfo() {
+  const [name, setName] = useState("");
+  const [company, setCompany] = useState("");
+  const [position, setPosition] = useState("");
+
+  function changeName(e) {
+    setName(e.target.value);
   }
-  return (
-    <>
-      <input
-        key={placeholder}
-        id={placeholder}
-        value={value}
-        onChange={changeInput}
-        placeholder={placeholder}
-      />
-    </>
-  );
-}
-export function PersonalInfo({ personalInfo }) {
+
+  function changeCompany(e) {
+    setCompany(e.target.value);
+  }
+
+  function changePosition(e) {
+    setPosition(e.target.value);
+  }
+
   return (
     <section className="personalInfo">
-      <Input placeholder={"Name"} />
+      <input value={name} onChange={changeName} placeholder="Name" />
       <br />
-      <Input placeholder={"Position"} />
+      <input
+        value={position}
+        onChange={changePosition}
+        placeholder="Position"
+      />
       at
-      <Input placeholder={"Company"} />
-      {/* <Input placeholder={"Email"} />
-      <Input placeholder={"Tel"} />
-      <Input placeholder={"Address"} /> */}
+      <input value={company} onChange={changeCompany} placeholder="Company" />
     </section>
   );
 }

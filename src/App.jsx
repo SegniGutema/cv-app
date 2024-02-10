@@ -3,16 +3,19 @@ import data from "./components/data";
 import { PersonalInfo } from "./components/personalInfo";
 import { Education } from "./components/education";
 import { Experience } from "./components/experience";
+import { Contact } from "./components/contacts";
 
 function App() {
   return (
     <>
       <div className="main">
-        <PersonalInfo personalInfo={data.personalInfo} />
-        <Education education={data.education.list} />
-        <Experience experience={data.experience.list} />
+        <PersonalInfo key={data.personalInfo.id} />
+        <Education key={data.education.id} />
+        <Experience key={data.experience.id} />
       </div>
-      <div className="side"></div>
+      <div className="side">
+        <Contact key={data.contacts.id} />
+      </div>
     </>
   );
 }

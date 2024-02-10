@@ -1,35 +1,39 @@
 import { useState } from "react";
 import "../styles/experience.css";
 import { v4 as uuidv4 } from "uuid";
+import data from "./data";
 
-function Input({ type, placeholder }) {
+function Input({ data }) {
   const [value, setValue] = useState("");
   function changeValue(e) {
     setValue(e.target.value);
   }
   return (
     <input
-      type={type}
+      type={"text"}
       value={value}
       onChange={changeValue}
-      placeholder={placeholder}
+      placeholder={data}
     />
   );
 }
 
-function InputSection({ item }) {
+function InputSection() {
   return (
     <div className="expCard">
-      <Input type="text" placeholder={"company"} />
-      <Input type="text" placeholder={"position"} />
-      <Input type="date" placeholder={""} />
-      <Input type="date" placeholder={""} />
+      <Input data="company" />
+      <Input data={"position"} />
+      from :
+      <Input data={"enter start date"} />
+      to :
+      <Input data={"enter end date"} />
     </div>
   );
 }
 
-export function Experience({ experience }) {
-  const [exps, setExps] = useState(experience);
+export function Experience() {
+  let experienceList = data.experience.list;
+  const [exps, setExps] = useState(experienceList);
   const [editMode, setEditMode] = useState(false);
 
   function addExp() {
@@ -49,35 +53,6 @@ export function Experience({ experience }) {
     let newExps = exps.filter((exp) => exp.id !== expId);
     setExps(newExps);
   }
-
-  // if (editMode) {
-  //   return (
-  //     <section
-  //       className="experience"
-  //       // onFocus={() => setEditMode(!editMode)}
-  //       // onClick={() => setEditMode(!editMode)}
-  //     >
-  //       <p>Experience</p>
-  //       <hr className="divider" />
-  //       <div className="expContainer">
-  //         {exps.map((exp) => (
-  //           <>
-  //             <InputSection item={exp} />
-  //             <button id="deleteButton" onClick={() => deleteExp(exp.id)}>
-  //               Delete
-  //             </button>
-  //             <button id="saveButton" onClick={() => setEditMode(!editMode)}>
-  //               Save
-  //             </button>
-  //           </>
-  //         ))}
-  //       </div>
-  //       <button id="addButton" onClick={() => addExp()}>
-  //         Add Experience
-  //       </button>
-  //     </section>
-  //   );
-  // }
 
   return (
     <section className="experience" onFocus={() => setEditMode(true)}>

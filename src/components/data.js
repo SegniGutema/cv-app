@@ -9,6 +9,15 @@ const data = {
     address: "Addis Ababa, Ethiopia",
     company: "self employed",
   },
+  contacts: {
+    id: "contacts",
+    list: [
+      {
+        id: uuidv4(),
+        content: "",
+      },
+    ],
+  },
   education: {
     id: "education",
     list: [
