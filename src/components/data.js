@@ -44,7 +44,12 @@ const data = {
   },
   skills: {
     id: "skills",
-    list: [],
+    list: [
+      {
+        id: uuidv4(),
+        content: "",
+      },
+    ],
   },
 };
 export default data;

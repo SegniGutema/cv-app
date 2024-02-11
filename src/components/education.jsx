@@ -53,35 +53,9 @@ export function Education() {
     setEdus(newEdus);
   }
 
-  // if (editMode) {
-  //   return (
-  //     <section
-  //       className="education"
-  //       // onFocus={() => setEditMode(!editMode)}
-  //       // onClick={() => setEditMode(!editMode)}
-  //     >
-  //       <p>Education</p>
-  //       <hr className="divider" />
-  //       <div className="eduContainer">
-  //         {edus.map((edu) => (
-  //           <>
-  //             <InputSection key={edu.id} item={edu} />
-  //             <button id="deleteButton" onClick={() => deleteEdu(edu.id)}>
-  //               Delete
-  //             </button>
-  //           </>
-  //         ))}
-  //       </div>
-  //       <button id="addButton" onClick={() => addEdu()}>
-  //         Add Education
-  //       </button>
-  //     </section>
-  //   );
-  // }
-
   return (
     <section className="experience" onFocus={() => setEditMode(true)}>
-      <p>Experience</p>
+      <p>Education</p>
       <hr className="divider" />
       <div className="expContainer">
         {edus.map((edu) => (
@@ -103,7 +77,7 @@ export function Education() {
             Save
           </button>
           <button id="addButton" onClick={() => addEdu()}>
-            Add Experience
+            Add Education
           </button>
         </div>
       )}

@@ -41,7 +41,7 @@ export function Contact() {
 
   return (
     <section id="contact" onFocus={() => setEditMode(true)}>
-      <h2 id="contactsHeader">Contacts</h2>
+      <h3 id="contactsHeader">Contacts</h3>
       {contactList.map((contact) => (
         <div key={contact.id}>
           <Input id={contact.id} />
